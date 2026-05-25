@@ -15,6 +15,7 @@ export const theme = {
         tertiary: "#ad8b73",
         error: "#ba1a1a",
         success: "#10b981",
+        transparent: "rgba(255, 255, 255, 0.6)",
         text: {
             main: "#191c1e",
             muted: "#444748",
@@ -57,13 +58,13 @@ export const theme = {
         },
     },
     spacing: {
-        containerMax: "1200px",
+        containerMax: "1500px",
         marginMobile: "20px",
         gutter: "24px",
         sectionGapLG: "160px",
         sectionGapSM: "80px",
     },
-    boderRadius: {
+    borderRadius: {
         none: "0",
         sm: "0.25rem",
         lg: "0.5rem",
