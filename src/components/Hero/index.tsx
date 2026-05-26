@@ -1,5 +1,4 @@
 import * as S from "./styles";
-import { mixins } from "../../styles/mixins";
 import heroImg from "../../assets/screen.png";
 import { Button } from "../Button";
 
