@@ -162,6 +162,24 @@ export const mixins = {
         width: 100%;
         height: 100%;
     `,
+
+    interactive: {
+        hoverGrow: css`
+            transition:
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease,
+                filter 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+
+            &:active {
+                transform: translateY(0);
+                filter: brightness(0.9);
+            }
+        `,
+    },
 };
 
 export const blur = (value: number | string) => css`

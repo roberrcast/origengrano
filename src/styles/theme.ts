@@ -1,6 +1,8 @@
 export const theme = {
     colors: {
         background: "#f7f9fb",
+        primary: "#1a1a1a",
+        secondary: "#4648d4",
         surface: "#ffffff",
         surfaceContainerLowest: "#ffffff",
         onSurface: "#191c1e",
@@ -10,12 +12,11 @@ export const theme = {
         outlineVariant: "#c4c7c7",
         latteAccent: "#e3d5ca",
         secondaryFixed: "#e1e0ff",
-        primary: "#1a1a1a",
-        secondary: "#4648d4",
         tertiary: "#ad8b73",
         error: "#ba1a1a",
         success: "#10b981",
         transparent: "rgba(255, 255, 255, 0.6)",
+        outlineBtnBg: "rgba(255, 255, 255, 0.8)",
         text: {
             main: "#191c1e",
             muted: "#444748",

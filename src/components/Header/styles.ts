@@ -8,7 +8,7 @@ export const Nav = styled.nav`
     height: 5rem;
     z-index: 50;
     background-color: ${({ theme }) => theme.colors.transparent};
-    ${blur("12px")};
+    ${blur(12)};
     border-bottom: 1px solid ${({ theme }) => theme.colors.outlineVariant}20;
     ${mixins.flexCenter};
 `;
@@ -53,7 +53,7 @@ export const NavLink = styled.a<{ $active: boolean }>`
         color: ${({ theme }) => theme.colors.secondary};
     }
 
-    &:focus-visible: {
+    &:focus-visible {
         outline: 2px solid ${({ theme }) => theme.colors.secondary};
         outline-offset: 4px;
         border-radius: 4px;
@@ -80,7 +80,7 @@ export const LoginButton = styled.button`
         background-color: ${({ theme }) => theme.colors.secondaryFixed}40;
     }
 
-    &:focus-visible: {
+    &:focus-visible {
         outline: 2px solid ${({ theme }) => theme.colors.secondary};
         outline-offset: 2px;
     }
