@@ -71,13 +71,16 @@ export const HeroTransition = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
+    /*  height: 200px; */
+    height: 50%;
     background: linear-gradient(
         to bottom,
-        transparent,
-        ${({ theme }) => theme.colors.background}
+        transparent 0%,
+        ${({ theme }) => theme.colors.background}99 40%,
+        ${({ theme }) => theme.colors.background} 100%
     );
     z-index: 1;
+    pointer-events: none;
 `;
 
 export const Container = styled.div`

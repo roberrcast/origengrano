@@ -110,11 +110,17 @@ export const mixins = {
     },
 
     rounded: {
+        none: css`
+            border-radius: ${({ theme }) => theme.borderRadius.none};
+        `,
         sm: css`
             border-radius: ${({ theme }) => theme.borderRadius.sm};
         `,
         lg: css`
             border-radius: ${({ theme }) => theme.borderRadius.lg};
+        `,
+        xl: css`
+            border-radius: ${({ theme }) => theme.borderRadius.xl};
         `,
         pill: css`
             border-radius: ${({ theme }) => theme.borderRadius.pill};
