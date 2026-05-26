@@ -4,7 +4,7 @@ import { Button } from "../Button";
 
 export const Hero = () => {
     return (
-        <S.HeroSection>
+        <S.HeroSection className="reveal">
             <S.StripeCanvas />
             <S.MeshGradient />
             <S.HeroTransition />
