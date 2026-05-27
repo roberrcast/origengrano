@@ -17,6 +17,10 @@ export const theme = {
         success: "#10b981",
         transparent: "rgba(255, 255, 255, 0.6)",
         outlineBtnBg: "rgba(255, 255, 255, 0.8)",
+        navButtonBg: "rgba(255, 255, 255, 0.5)",
+        testimonialCardBorder: "rgba(255, 255, 255, 0.4)",
+        white: "#ffffff",
+        testimonialsBg: "#f2f4f6",
         text: {
             main: "#191c1e",
             muted: "#444748",

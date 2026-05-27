@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { useReveal } from "./hooks/useReveal";
 import { Features } from "./components/Features";
+import { Testimonials } from "./components/Testimonials";
 
 function App() {
     useReveal();
@@ -15,6 +16,7 @@ function App() {
             <Header />
             <Hero />
             <Features />
+            <Testimonials />
         </ThemeProvider>
     );
 }
