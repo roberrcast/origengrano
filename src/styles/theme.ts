@@ -1,6 +1,8 @@
 export const theme = {
     colors: {
         background: "#f7f9fb",
+        primary: "#1a1a1a",
+        secondary: "#4648d4",
         surface: "#ffffff",
         surfaceContainerLowest: "#ffffff",
         onSurface: "#191c1e",
@@ -10,11 +12,16 @@ export const theme = {
         outlineVariant: "#c4c7c7",
         latteAccent: "#e3d5ca",
         secondaryFixed: "#e1e0ff",
-        primary: "#1a1a1a",
-        secondary: "#4648d4",
         tertiary: "#ad8b73",
         error: "#ba1a1a",
         success: "#10b981",
+        transparent: "rgba(255, 255, 255, 0.6)",
+        outlineBtnBg: "rgba(255, 255, 255, 0.8)",
+        navButtonBg: "rgba(255, 255, 255, 0.5)",
+        testimonialCardBorder: "rgba(255, 255, 255, 0.4)",
+        white: "#ffffff",
+        testimonialsBg: "#f2f4f6",
+        footerBg: "#e2e2e2",
         text: {
             main: "#191c1e",
             muted: "#444748",
@@ -57,13 +64,13 @@ export const theme = {
         },
     },
     spacing: {
-        containerMax: "1200px",
+        containerMax: "1500px",
         marginMobile: "20px",
         gutter: "24px",
         sectionGapLG: "160px",
         sectionGapSM: "80px",
     },
-    boderRadius: {
+    borderRadius: {
         none: "0",
         sm: "0.25rem",
         lg: "0.5rem",

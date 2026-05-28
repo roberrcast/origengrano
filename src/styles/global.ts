@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { fluid } from "./mixins";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -28,5 +29,16 @@ font-family: inherit;
 a {
 text-decoration: none;
 color: inherit;
+}
+
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
 }
 `;
