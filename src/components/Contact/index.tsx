@@ -57,7 +57,7 @@ export const Contact = () => {
         setTimeout(() => {
             setStatus("success");
             setFormData({ name: "", email: "", message: "" });
-            setTimeout(() => setStatus("idle"), 300);
+            setTimeout(() => setStatus("idle"), 3000);
         }, 1500);
     };
 
