@@ -21,6 +21,7 @@ export const theme = {
         testimonialCardBorder: "rgba(255, 255, 255, 0.4)",
         white: "#ffffff",
         testimonialsBg: "#f2f4f6",
+        footerBg: "#e2e2e2",
         text: {
             main: "#191c1e",
             muted: "#444748",
