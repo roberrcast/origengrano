@@ -1,26 +1,24 @@
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { theme } from "./styles/theme";
 import { GlobalStyle } from "./styles/global";
 import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { useReveal } from "./hooks/useReveal";
-import { Features } from "./components/Features";
-import { Testimonials } from "./components/Testimonials";
-import { Contact } from "./components/Contact";
 import { Footer } from "./Footer";
+import { Home } from "./pages/Home";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
-    useReveal();
-
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
-            <Header />
-            <Hero />
-            <Features />
-            <Testimonials />
-            <Contact />
-            <Footer />
+            <Router>
+                <ScrollToTop />
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+                <Footer />
+            </Router>
         </ThemeProvider>
     );
 }
