@@ -22,6 +22,13 @@ export const theme = {
         white: "#ffffff",
         testimonialsBg: "#f2f4f6",
         footerBg: "#e2e2e2",
+        coffeePrimary: "#25160e",
+        coffeeSecondary: "#7d562d",
+        coffeeBackground: "#f9f9f9",
+        coffeeOutlineVariant: "#d3c3bd",
+        coffeeOnSurfaceVariant: "#4f4540",
+        coffeeSurfaceContainer: "#eeeeee",
+        coffeePrimaryFixedDim: "#dec1b3",
         text: {
             main: "#191c1e",
             muted: "#444748",

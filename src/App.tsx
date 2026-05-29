@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./Footer";
 import { Home } from "./pages/Home";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { Subscriptions } from "./pages/Subscriptions";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/suscripciones" element={<Subscriptions />} />
                 </Routes>
                 <Footer />
             </Router>

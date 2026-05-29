@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export const useReveal = () => {
+    const { pathname } = useLocation();
+
     useEffect(() => {
         const observerOptions = {
             threshold: 0.1,
@@ -20,5 +23,5 @@ export const useReveal = () => {
         elements.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
-    }, []);
+    }, [pathname]);
 };

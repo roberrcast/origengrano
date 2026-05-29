@@ -1,5 +1,6 @@
 import * as S from "./styles";
-import heroImg from "../../assets/screen.png";
+import heroImg from "../../assets/hero.webp";
+import { Link } from "react-router-dom";
 import { Button } from "../Button";
 
 export const Hero = () => {
@@ -22,7 +23,12 @@ export const Hero = () => {
                     </S.Description>
 
                     <S.ButtonGroup>
-                        <Button variant="primary" icon="arrow_forward">
+                        <Button
+                            variant="primary"
+                            icon="arrow_forward"
+                            as={Link}
+                            to="/suscripciones"
+                        >
                             Explorar suscripciones
                         </Button>
 

@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode, ElementType } from "react";
 import * as S from "./styles";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -6,6 +6,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: S.ButtonVariant;
     fullWidth?: boolean;
     icon?: string;
+    as?: ElementType;
+    to?: string;
+    $highlighted?: boolean;
 }
 
 export const Button = ({
