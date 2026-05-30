@@ -4,7 +4,7 @@ import * as S from "./styles";
 const NAV_LINKS = [
     { id: 1, name: "Suscripciones", path: "/suscripciones" },
     { id: 2, name: "Nuestra Mezcla", path: "/nuestra-mezcla" },
-    { id: 3, name: "Sostenibilidad", path: "#sostenibilidad" },
+    { id: 3, name: "Sostenibilidad", path: "/sostenibilidad" },
 ];
 
 export const Header = () => {

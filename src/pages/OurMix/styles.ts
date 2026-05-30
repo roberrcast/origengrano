@@ -126,11 +126,14 @@ export const InsightFlex = styled.div`
     .image-side {
         flex: 1;
         width: 100%;
+
         img {
             width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            ${mixins.rounded.pill};
+            object-fit: contain;
+            object-position: center;
+            background-color: ${({ theme }) =>
+                theme.colors.coffeeSurfaceContainer};
+            ${mixins.rounded.xl};
             box-shadow: ${({ theme }) => theme.shadows.sm};
         }
     }
