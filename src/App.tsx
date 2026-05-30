@@ -7,6 +7,8 @@ import { Footer } from "./Footer";
 import { Home } from "./pages/Home";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Subscriptions } from "./pages/Subscriptions";
+import { OurMix } from "./pages/OurMix";
+import { Sustainability } from "./pages/Sustainability";
 
 function App() {
     return (
@@ -18,6 +20,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/suscripciones" element={<Subscriptions />} />
+                    <Route path="/nuestra-mezcla" element={<OurMix />} />
+                    <Route
+                        path="/sostenibilidad"
+                        element={<Sustainability />}
+                    />
                 </Routes>
                 <Footer />
             </Router>

@@ -9,13 +9,13 @@ export const Testimonials = () => {
                     <S.Title>Lo que dicen nuestros suscriptores.</S.Title>
 
                     <S.NavButtons>
-                        <S.NavButton arial-label="Anterior">
+                        <S.NavButton aria-label="Anterior">
                             <span className="material-symbols-outlined">
                                 chevron_left
                             </span>
                         </S.NavButton>
 
-                        <S.NavButton arial-label="Siguiente">
+                        <S.NavButton aria-label="Siguiente">
                             <span className="material-symbols-outlined">
                                 chevron_right
                             </span>

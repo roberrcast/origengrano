@@ -2,5 +2,18 @@ import coffee1 from "./coffee-1.webp";
 import coffee2 from "./coffee-2.webp";
 import coffee3 from "./coffee-3.webp";
 import handsCoffee from "./hands-coffee.webp";
+import coffeeHero from "./coffee-bg.webp";
+import mix from "./hands-coffee.webp";
+import coffeeBolt from "./coffee-bolt.webp";
+import plantation from "./coffee-plantation.webp";
 
-export { coffee1, coffee2, coffee3, handsCoffee };
+export {
+    coffee1,
+    coffee2,
+    coffee3,
+    handsCoffee,
+    coffeeHero,
+    mix,
+    coffeeBolt,
+    plantation,
+};
