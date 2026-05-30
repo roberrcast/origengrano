@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mixins } from "../../styles/mixins";
+import { fluid, mixins } from "../../styles/mixins";
 
 export const PageWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.coffeeBackground};
@@ -20,12 +20,13 @@ export const Hero = styled.section`
 `;
 
 export const Badge = styled.div`
+    ${mixins.typography.labelUpper};
+    font-size: ${fluid(".65rem", "0.875rem", "500px", "1500px")} !important;
     padding: 6px 16px;
     background-color: ${({ theme }) => theme.colors.badge};
     color: ${({ theme }) => theme.colors.coffeePrimary};
     ${mixins.rounded.pill};
     margin-bottom: 16px;
-    ${mixins.typography.labelUpper};
     text-transform: unset;
     font-size: 16px;
 `;
@@ -195,6 +196,7 @@ export const QuoteSection = styled.section`
         ${mixins.typography.headlineMD};
         color: ${({ theme }) => theme.colors.coffeePrimary};
         font-style: normal;
+        font-size: 1.2rem;
     }
 `;
 

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import * as S from "./styles";
 
@@ -8,7 +9,12 @@ const NAV_LINKS = [
 ];
 
 export const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
+
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location.pathname]);
 
     return (
         <S.Nav aria-label="Navegación principal">
@@ -46,7 +52,34 @@ export const Header = () => {
 
                     <S.PrimaryButton>Empezar Ahora</S.PrimaryButton>
                 </S.ActionGroup>
+
+                {/* -- Icono menu móvil -- */}
+                <S.MenuButton
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Abrir menú"
+                >
+                    <span className="material-symbols-outlined">
+                        {isMenuOpen ? "close" : "menu"}
+                    </span>
+                </S.MenuButton>
             </S.Container>
+
+            {/* -- mobile overlay (renderizado condicional) -- */}
+            <S.MobileOverlay $isOpen={isMenuOpen}>
+                {NAV_LINKS.map((link) => (
+                    <S.NavLink
+                        as={Link}
+                        key={link.id}
+                        to={link.path}
+                        $active={location.pathname === link.path}
+                    >
+                        {link.name}
+                    </S.NavLink>
+                ))}
+                <hr />
+                <S.PrimaryButton>Empezar ahora</S.PrimaryButton>
+                <S.LoginButton>Iniciar sesión</S.LoginButton>
+            </S.MobileOverlay>
         </S.Nav>
     );
 };
