@@ -1,3 +1,5 @@
+import { fluid } from "./mixins";
+
 export const theme = {
     colors: {
         background: "#f7f9fb",
@@ -42,7 +44,7 @@ export const theme = {
     typography: {
         fontFamily: "'Google Sans', sans-serif",
         headlineXL: {
-            size: "4rem",
+            size: `${fluid("2rem", "4rem", "500px", "1500px")}`,
             weight: "700",
             lineHeight: "1.1",
             letterSpacing: "-0.02em",

@@ -24,10 +24,6 @@ export const Container = styled.div`
 export const BrandSection = styled.div`
     text-align: center;
 
-    @media (max-width: 768px) {
-        text-align: left;
-    }
-
     h3 {
         ${mixins.typography.headlineMD};
         font-weight: 700;
