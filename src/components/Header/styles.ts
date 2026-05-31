@@ -154,26 +154,34 @@ export const MobileOverlay = styled.div<{ $isOpen: boolean }>`
 
     @media (max-width: 1040px) {
         display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-        position: absolute;
+
+        position: fixed;
         top: 5rem;
         left: 0;
         width: 100%;
-        background-color: #ffffff;
+        background-color: ${({ theme }) => theme.colors.white};
         flex-direction: column;
         align-items: center;
-        padding: 24px;
+
+        padding: 24px 24px 80px;
         gap: 24px;
         border-top: 1px solid ${({ theme }) => theme.colors.outlineVariant}33;
         box-shadow: ${({ theme }) => theme.shadows.premium};
         z-index: 40;
 
-        /* Simple slide-down animation */
+        max-height: calc(100vh - 5rem);
+        max-height: calc(100dvh - 5rem);
+
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
         animation: slideIn 0.3s ease-out;
 
         hr {
             border: none;
             border-top: 1px solid
                 ${({ theme }) => theme.colors.outlineVariant}33;
+            width: 100%;
         }
 
         @keyframes slideIn {

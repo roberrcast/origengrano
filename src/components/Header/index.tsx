@@ -13,6 +13,18 @@ export const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isMenuOpen]);
+
+    useEffect(() => {
         setIsMenuOpen(false);
     }, [location.pathname]);
 
