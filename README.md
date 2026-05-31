@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# ☕ Origen y Grano
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    **Origen y Grano** (Origin & Grain) is a premium, tech-forward, and artisanal specialty coffee subscription service. The application bridges the gap
 
-Currently, two official plugins are available:
+between the organic, physical world of high-quality coffee and the smooth, frictionless experience of modern subscription platforms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+    Designed with a sleek, high-end "Stripe-inspired" corporate-modern aesthetic, the platform is engineered to deliver a premium user experience across
 
-## React Compiler
+all devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    ---
 
-## Expanding the ESLint configuration
+    ## 🎨 Design System: *Premium Roast Modernist*
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    The project follows a strict and highly refined design spec detailed in `DESIGN.md`:
+    *   **Palette:**
+        *   `Primary`: Deep charcoal near-black (`#1a1a1a`) for high authority and legibility.
+        *   `Secondary`: Vibrant digital indigo (`#6366f1`) for main call-to-actions.
+        *   `Tertiary`: Muted artisanal coffee bronze (`#ad8b73`) to represent the physical product.
+    *   **Typography:** Geometric, modern typography featuring **Hanken Grotesk** / **Google Sans** with tight, editorial letter-spacing on headlines and
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+highly readable body text.
+_ **Geometry:** Consistent pill-shaped rounding (`1.0rem / 16px` border-radius) for inputs and buttons, transitioning to massive rounded corners (`2.
+  0rem`–`3.0rem`) for cards.
+_ **Elevation:** Multi-layered, soft ambient shadows to create a premium floating feel.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    ---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ## 🛠️ Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    *   **Core:** React 19 + TypeScript + Vite
+    *   **Styling:** Styled Components (CSS-in-JS)
+    *   **Routing:** React Router DOM (v7)
+    *   **Testing:** Vitest + React Testing Library + JSDOM + Jest DOM
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    ---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ## 📂 Project Structure
+
+    ```text
+    origen_y_grano/
+    ├── src/
+    │   ├── __tests__/            # Unit and Integration test suites
+    │   │   └── Components/
+    │   │       └── Contact.test.tsx
+    │   ├── components/           # Reusable UI components
+    │   │   ├── Button/
+    │   │   ├── Contact/          # Form component & validation logic
+    │   │   ├── Features/
+    │   │   ├── Header/
+    │   │   ├── Hero/
+    │   │   ├── ScrollToTop.tsx
+    │   │   └── Testimonials/
+    │   ├── pages/                # Route views (pages)
+    │   │   ├── Home/             # Landing page
+    │   │   ├── OurMix/           # Coffee blend specifications
+    │   │   ├── Subscriptions/    # Subscription tiers & plans
+    │   │   └── Sustainability/   # Ethical sourcing & direct-trade info
+    │   ├── styles/               # Design tokens, global styles, and theme
+    │   ├── App.tsx               # Main routing & ThemeProvider wrapper
+    │   ├── main.tsx              # App entry point
+    │   └── setupTests.ts         # Testing library custom matchers configuration
+    ├── tsconfig.json             # TypeScript configuration
+    ├── vite.config.ts            # Vite & Vitest configuration
+    └── DESIGN.md                 # Full Brand & Design specifications
+
+──────
+
+## 🧪 Testing Suite
+
+We use Vitest and React Testing Library to ensure the robustness of our UI and underlying business logic.
+
+### Tested Scenarios
+
+1. Form Validation (Contact Component):
+   • Validates that required fields (Name, Email, Message) throw errors if submitted empty or containing only whitespace.
+   • Validates incorrect email structures (e.g. missing @ symbols, domains, etc.).
+   • Verifies direct utility unit testing for the custom validateEmail regex.
+2. Form Lifecycle (Happy Path):
+   • Verifies immediate transition to the "sending..." state upon valid submission.
+   • Uses Vitest's Mock/Fake Timers to fast-forward past network request delays (1.5 seconds) and verify the successful display of "¡Mensaje enviado!" .
+   • Confirms inputs are fully cleared out upon successful submission.
+
+To run the test suite in watch mode, use:
+
+    npm run test
+
+──────
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+
+Ensure you have Node.js https://nodejs.org/ installed (v18+ recommended).
+
+### 2. Installation
+
+Clone the repository, navigate to the folder, and install all dependencies:
+
+    npm install
+
+### 3. Run Development Server
+
+    npm run dev
+
+Open http://localhost:5173 in your browser to view the application.
+
+### 4. Build for Production
+
+To typecheck and build the production bundle:
+
+    npm run build
