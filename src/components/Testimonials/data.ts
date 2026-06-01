@@ -25,7 +25,7 @@ export const userData: Users[] = [
     {
         id: 2,
         stars: 5,
-        quote: '"El tueste es simplemente impecable. Se nota la pasión por el detalle en cada grano. El mejor servicio de café en España."',
+        quote: '"El tueste es simplemente impecable. Se nota la pasión por el detalle en cada grano. El mejor servicio de café en México."',
         author: "Carlos Ruiz",
         location: "Suscripción Pro - CDMX",
         avatarColor: "#858383",
