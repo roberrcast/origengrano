@@ -2,8 +2,10 @@ import * as S from "./styles";
 import { Button } from "../../components/Button";
 import { useReveal } from "../../hooks/useReveal";
 import { coffeeBolt, plantation } from "../../assets";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 export const Sustainability = () => {
+    useDocumentTitle("Sostenibilidad");
     useReveal();
 
     return (
