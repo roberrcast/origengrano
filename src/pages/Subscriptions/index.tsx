@@ -1,8 +1,10 @@
 import * as S from "./styles";
 import { dataPlans, queries } from "./data";
 import { useReveal } from "../../hooks/useReveal";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 export const Subscriptions = () => {
+    useDocumentTitle("Suscripciones");
     useReveal();
 
     return (

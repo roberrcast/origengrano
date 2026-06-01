@@ -3,8 +3,10 @@ import { Button } from "../../components/Button";
 import { useReveal } from "../../hooks/useReveal";
 import { dataSteps } from "./data";
 import { mix, coffeeHero } from "../../assets";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 export const OurMix = () => {
+    useDocumentTitle("Nuestra Mezcla");
     useReveal();
 
     return (
