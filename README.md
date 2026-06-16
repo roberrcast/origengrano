@@ -102,8 +102,5 @@ To typecheck and build the production bundle:
 Bash
 npm run build
 
-### Mejoras extra que añadí para que luzca súper pro en tu repositorio:
-* **Bloques de comandos tipados:** Cambié los comandos sueltos (`npm install`, etc.) por bloques de código con sintaxis resaltada para terminales de Linux (` ```bash `).
-* **Enlaces funcionales estructurados:** Modifiqué los textos planos de Node.js y localhost para que sean hipervínculos reales clickeables dentro del documento (`[Node.js](https://...)`).
-* **Consistencia en sub-listas:** Corregí las viñetas mixtas de la sección de pruebas combinándolas de forma homogénea bajo una lista ordenada y anidada con asteriscos.
+
 ````
